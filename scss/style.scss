@@ -112,6 +112,9 @@ ul {
 
 .headings {
     font-size: 3rem;
+    @media(max-width: 768px) {
+        font-size: 2.2rem;
+    }
     &::after {
         display: block;
         content: "";
@@ -147,6 +150,10 @@ nav {
         @include flex(space-between,
         center,
         row);
+        flex-wrap: wrap;
+        @media(max-width: 768px) {
+            @include flex(space-between, center, column);
+        }
         .logo {
             font-family: $headings;
             font-size: 2rem;
@@ -158,6 +165,9 @@ nav {
             row);
             li {
                 margin-left: 60px;
+                @media(max-width: 768px) {
+                    margin: 5px 10px;
+                }
                 a {
                     @extend .links;
                 }
@@ -178,6 +188,7 @@ footer {
         @include flex(space-between,
         flex-start,
         row);
+        flex-wrap: wrap;
         color: $lightGray;
         h3 {
             font-size: 1.5rem;
@@ -186,15 +197,24 @@ footer {
         }
         article:nth-child(1) {
             flex: 0 0 63%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
         }
         article:nth-child(2) {
             flex: 0 0 15%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
             i {
                 color: $secondary;
             }
         }
         article:nth-child(3) {
             flex: 0 0 19%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
             a {
                 color: $secondary;
                 margin-right: 10px;
@@ -215,6 +235,9 @@ headerHome
     cover,
     no-repeat,
     80vh);
+    @media(max-width: 768px) {
+        @include img(center, cover, no-repeat, 60vh);
+    }
 }
 
 
@@ -229,6 +252,9 @@ intro
     padding: 30px 50px;
     text-align: center;
     line-height: 1.2;
+    @media(max-width: 768px) {
+        width: 80%;
+    }
     h1 {
         color: $secondary;
         font-size: 8rem;
@@ -236,10 +262,17 @@ intro
         text-shadow: 3px 3px darken($primary, 20%);
         margin-top: -110px;
         letter-spacing: 4px;
+        @media(max-width: 768px) {
+            font-size: 4rem;
+            margin-top: -70px;
+        }
     }
     h3 {
         color: $lightGray;
         font-size: 2.5rem;
+        @media(max-width: 768px) {
+            font-size: 2rem;
+        }
     }
     p {
         font-style: italic;
@@ -268,6 +301,10 @@ services
         flex-start,
         row);
         height: 50vh;
+        @media(max-width: 768px) {
+            @include flex(space-between, flex-start, column);
+            height: auto;
+        }
         article {
             flex: 0 0 30%;
             padding: 30px;
@@ -314,6 +351,7 @@ services
     @include flex( space-between,
     center,
     row);
+    flex-wrap: wrap;
     article:first-child {
         flex: 0 0 48%;
         p {
@@ -322,6 +360,9 @@ services
         button {
             @include btn;
         }
+        @media(max-width: 768px) {
+            flex: 0 0 100%;
+        }
     }
     article:last-child {
         flex: 0 0 48%;
@@ -329,12 +370,20 @@ services
         center,
         row);
         flex-wrap: wrap;
+        @media(max-width: 768px) {
+            flex: 0 0 100%;
+            margin-top: 40px;
+        }
         div {
             flex: 0 0 50%;
             img {
                 width: 80%;
                 border-radius: 50%;
                 margin-bottom: 40px;
+                @media(max-width: 768px) {
+                    width: 100%;
+                    padding: 10px;
+                }
             }
         }
     }
@@ -348,10 +397,24 @@ services
     @include flex(space-between,
     center,
     row);
+    flex-wrap: wrap;
     article {
         flex: 0 0 48%;
+        @media(max-width: 768px) {
+            flex: 0 0 100%;
+        }
         img {
             width: 100%;
+            @media(max-width: 768px) {
+                display: none;
+            }
         }
     }
+}
+
+
+/**slider*/
+
+.slider {
+    background: $secondary;
 }

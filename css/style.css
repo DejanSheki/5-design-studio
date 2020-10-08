@@ -63,6 +63,11 @@ ul {
 .headings {
   font-size: 3rem;
 }
+@media (max-width: 768px) {
+  .headings {
+    font-size: 2.2rem;
+  }
+}
 .headings::after {
   display: block;
   content: "";
@@ -97,6 +102,15 @@ nav .container {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 nav .container .logo {
   font-family: "Anton", sans-serif;
@@ -111,6 +125,11 @@ nav .container ul {
 nav .container ul li {
   margin-left: 60px;
 }
+@media (max-width: 768px) {
+  nav .container ul li {
+    margin: 5px 10px;
+  }
+}
 /**********************
 footer
 **********************/
@@ -123,6 +142,7 @@ footer .container {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
+  flex-wrap: wrap;
   color: #fdf9f6;
 }
 footer .container h3 {
@@ -133,14 +153,29 @@ footer .container h3 {
 footer .container article:nth-child(1) {
   flex: 0 0 63%;
 }
+@media (max-width: 768px) {
+  footer .container article:nth-child(1) {
+    flex: 0 0 100%;
+  }
+}
 footer .container article:nth-child(2) {
   flex: 0 0 15%;
+}
+@media (max-width: 768px) {
+  footer .container article:nth-child(2) {
+    flex: 0 0 100%;
+  }
 }
 footer .container article:nth-child(2) i {
   color: #f1c50e;
 }
 footer .container article:nth-child(3) {
   flex: 0 0 19%;
+}
+@media (max-width: 768px) {
+  footer .container article:nth-child(3) {
+    flex: 0 0 100%;
+  }
 }
 footer .container article:nth-child(3) a {
   color: #f1c50e;
@@ -158,6 +193,14 @@ headerHome
   background-repeat: no-repeat;
   height: 80vh;
 }
+@media (max-width: 768px) {
+  .headerHome {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+  }
+}
 
 /**********************
 intro
@@ -170,6 +213,11 @@ intro
   text-align: center;
   line-height: 1.2;
 }
+@media (max-width: 768px) {
+  .intro {
+    width: 80%;
+  }
+}
 .intro h1 {
   color: #f1c50e;
   font-size: 8rem;
@@ -178,9 +226,20 @@ intro
   margin-top: -110px;
   letter-spacing: 4px;
 }
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 4rem;
+    margin-top: -70px;
+  }
+}
 .intro h3 {
   color: #fdf9f6;
   font-size: 2.5rem;
+}
+@media (max-width: 768px) {
+  .intro h3 {
+    font-size: 2rem;
+  }
 }
 .intro p {
   font-style: italic;
@@ -208,6 +267,15 @@ services
   align-items: flex-start;
   flex-direction: row;
   height: 50vh;
+}
+@media (max-width: 768px) {
+  .services div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+  }
 }
 .services div article {
   flex: 0 0 30%;
@@ -252,6 +320,7 @@ services
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .team article:first-child {
   flex: 0 0 48%;
@@ -274,6 +343,11 @@ services
   background: #f1c50e;
   color: #7c57b4;
 }
+@media (max-width: 768px) {
+  .team article:first-child {
+    flex: 0 0 100%;
+  }
+}
 .team article:last-child {
   flex: 0 0 48%;
   display: flex;
@@ -281,6 +355,12 @@ services
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .team article:last-child {
+    flex: 0 0 100%;
+    margin-top: 40px;
+  }
 }
 .team article:last-child div {
   flex: 0 0 50%;
@@ -290,6 +370,12 @@ services
   border-radius: 50%;
   margin-bottom: 40px;
 }
+@media (max-width: 768px) {
+  .team article:last-child div img {
+    width: 100%;
+    padding: 10px;
+  }
+}
 
 /**projects**/
 .projects {
@@ -298,12 +384,28 @@ services
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .projects article {
   flex: 0 0 48%;
 }
+@media (max-width: 768px) {
+  .projects article {
+    flex: 0 0 100%;
+  }
+}
 .projects article img {
   width: 100%;
+}
+@media (max-width: 768px) {
+  .projects article img {
+    display: none;
+  }
+}
+
+/**slider*/
+.slider {
+  background: #f1c50e;
 }
 
 /*# sourceMappingURL=style.css.map */
