@@ -71,6 +71,20 @@ ul {
   background: #7c57b4;
 }
 
+.headers {
+  background: #f1c50e;
+  text-align: center;
+  padding: 10px 0;
+}
+.headers h1 {
+  font-size: 2rem;
+  text-shadow: 1px 1px #fff;
+}
+.headers p {
+  color: #7c57b4;
+  font-size: 1.3rem;
+}
+
 /**********************
 nav
 **********************/
@@ -229,6 +243,52 @@ services
 }
 .services div article:nth-child(3) a {
   color: #4c3372;
+}
+
+/**team**/
+.team {
+  padding: 70px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.team article:first-child {
+  flex: 0 0 48%;
+}
+.team article:first-child p {
+  padding: 50px 0;
+}
+.team article:first-child button {
+  padding: 15px 30px;
+  background: #7c57b4;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-right: 20px;
+}
+.team article:first-child button:hover {
+  cursor: pointer;
+  transition: 0.4s ease;
+  background: #f1c50e;
+  color: #7c57b4;
+}
+.team article:last-child {
+  flex: 0 0 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.team article:last-child div {
+  flex: 0 0 50%;
+}
+.team article:last-child div img {
+  width: 80%;
+  border-radius: 50%;
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

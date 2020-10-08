@@ -39,6 +39,22 @@ $height) {
     height: $height;
 }
 
+@mixin btn {
+    padding: 15px 30px;
+    background: $primary;
+    color: $white;
+    border: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-right: 20px;
+    &:hover {
+        cursor: pointer;
+        transition: $transition;
+        background: $secondary;
+        color: $primary;
+    }
+}
+
 
 /**********************
 basic styles
@@ -102,6 +118,20 @@ ul {
         height: 3px;
         width: 50px;
         background: $primary;
+    }
+}
+
+.headers {
+    background: $secondary;
+    text-align: center;
+    padding: 10px 0;
+    h1 {
+        font-size: 2rem;
+        text-shadow: 1px 1px $white;
+    }
+    p {
+        color: $primary;
+        font-size: 1.3rem;
     }
 }
 
@@ -271,6 +301,40 @@ services
             }
             a {
                 color: darken($primary, 20%);
+            }
+        }
+    }
+}
+
+
+/**team**/
+
+.team {
+    padding: $padding;
+    @include flex( space-between,
+    center,
+    row);
+    article:first-child {
+        flex: 0 0 48%;
+        p {
+            padding: 50px 0;
+        }
+        button {
+            @include btn;
+        }
+    }
+    article:last-child {
+        flex: 0 0 48%;
+        @include flex( space-between,
+        center,
+        row);
+        flex-wrap: wrap;
+        div {
+            flex: 0 0 50%;
+            img {
+                width: 80%;
+                border-radius: 50%;
+                margin-bottom: 40px;
             }
         }
     }
