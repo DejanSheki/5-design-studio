@@ -255,16 +255,22 @@ services
         article:nth-child(2) {
             background: $secondary;
             align-self: center;
-            color: $white;
+            color: $primary;
             h3 {
-                color: $white;
+                color: $primary;
+            }
+            a {
+                color: $primary;
             }
         }
         article:nth-child(3) {
             background: $white;
             align-self: flex-end;
+            h3 {
+                color: darken($primary, 20%);
+            }
             a {
-                color: $primary;
+                color: darken($primary, 20%);
             }
         }
     }

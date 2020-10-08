@@ -212,17 +212,23 @@ services
 .services div article:nth-child(2) {
   background: #f1c50e;
   align-self: center;
-  color: #fff;
+  color: #7c57b4;
 }
 .services div article:nth-child(2) h3 {
-  color: #fff;
+  color: #7c57b4;
+}
+.services div article:nth-child(2) a {
+  color: #7c57b4;
 }
 .services div article:nth-child(3) {
   background: #fff;
   align-self: flex-end;
 }
+.services div article:nth-child(3) h3 {
+  color: #4c3372;
+}
 .services div article:nth-child(3) a {
-  color: #7c57b4;
+  color: #4c3372;
 }
 
 /*# sourceMappingURL=style.css.map */
