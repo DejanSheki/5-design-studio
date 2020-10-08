@@ -339,3 +339,19 @@ services
         }
     }
 }
+
+
+/**projects**/
+
+.projects {
+    padding: $padding;
+    @include flex(space-between,
+    center,
+    row);
+    article {
+        flex: 0 0 48%;
+        img {
+            width: 100%;
+        }
+    }
+}
